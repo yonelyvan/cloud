@@ -32,7 +32,6 @@ $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 $ su - hduser
 $ sudo sh conf-red-master.sh
 ```
--reiniciar
 ##### Red slave 
 (para cada slave)
 ```shell
@@ -41,7 +40,7 @@ sudo sh conf-red-slave.sh
 ```
 > probar conexiones ssh para cada nodo <br>
 > $ ssh hduser@slaveX  (X={1,2,3}) <br>
-> **REINICIAR** <br>
+> **REINICIAR master y slaves** <br>
 ### CONFIGURACION HADOOP
 ##### hadoop master
 ```shell
