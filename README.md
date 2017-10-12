@@ -7,13 +7,13 @@ sudo apt-get install openjdk-8-jdk
 sudo apt-get install ssh
 ```
 ### archivos de configuración:
-conf-general.sh --(master y slaves) <Enter>
-Copiar al directorio home del usuario con q se inicio secion
+- **conf-general.sh** (master y slaves)
+- Copiar al directorio home del usuario con q se inicio secion
 
-conf-red-master.sh y conf-hadoop-master.sh --(master)
+- **conf-red-master.sh** y **conf-hadoop-master.sh** --(master)
 - Copiar al directorio home de hduser
 
-conf-red-slave.sh  y conf-hadoop-slave.sh --(slaves)
+**conf-red-slave.sh**  y **conf-hadoop-slave.sh** --(slaves)
 - Copiar al directorio home de hduser segun corresponda el nodo(slave1,slave2,slave3)
 ## MASTER Y SLAVES
 -para cada nodo sin importar si es master o slave
