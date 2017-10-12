@@ -39,9 +39,9 @@ $ sudo sh conf-red-master.sh
 su - hduser
 sudo sh conf-red-slave.sh
 ```
--probar conexiones ssh para cada nodo
--$ ssh hduser@slaveX  (X={1,2,3})
--REINICIAR
+> probar conexiones ssh para cada nodo
+> $ ssh hduser@slaveX  (X={1,2,3})
+> REINICIAR
 ### CONFIGURACION HADOOP
 ##### hadoop master
 ```shell
