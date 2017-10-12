@@ -15,8 +15,7 @@ Copiar al directorio home de hduser
 
 - **conf-red-slave.sh**  y **conf-hadoop-slave.sh** (slaves) :
 Copiar al directorio home de hduser segun corresponda el nodo(slave1,slave2,slave3)
-## MASTER Y SLAVES
-- para cada nodo sin importar si es master o slave
+## MASTER Y SLAVES `para cada nodo sin importar si es master o slave`
 ```shell
 sudo sh conf-general.sh
 ```
@@ -33,8 +32,7 @@ $ su - hduser
 $ sudo sh conf-red-master.sh
 ```
 -reiniciar
-##### Red slave
--para cada slave
+##### Red slave `(para cada slave)`
 ```shell
 su - hduser
 sudo sh conf-red-slave.sh
