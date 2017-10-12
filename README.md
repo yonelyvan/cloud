@@ -1,11 +1,11 @@
---===============PREREQUISITOS====================
+#PREREQUISITOS
 --Primero se debe instalar JAVA , SSH	y copiar hadoop en  /opt/hadoop-2.7.3/
 --$ sudo apt-get update
 --$ sudo add-apt-repository ppa:openjdk-r/ppa
 --$ sudo apt-get install openjdk-8-jdk
 --$ sudo apt-get install ssh
-======================================================================
-Nota:
+
+##Nota:
 --los archivos:
 conf-general.sh --(master y slaves)
 -- Copiar al directorio home del usuario con q se inicio secion
@@ -15,7 +15,7 @@ conf-red-master.sh y conf-hadoop-master.sh --(master)
 
 conf-red-slave.sh  y conf-hadoop-slave.sh --(slaves)
 -- Copiar al directorio home de hduser segun corresponda el nodo(slave1,slave2,slave3)
-============================MASTER Y SLAVES===========================
+#MASTER Y SLAVES
 --para cada nodo sin importar si es master o slave
 $ sudo sh conf-general.sh
 --se obtiene:
@@ -24,30 +24,29 @@ $ sudo sh conf-general.sh
 $ su - hduser
 $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
-=========================CONFIGURACION RED=============================
-=========MASTER red=========
+##CONFIGURACION RED
+###MASTER red
 $ su - hduser
 $ sudo sh conf-red-master.sh
 --reiniciar
-=========SLAVE red=========
+###SLAVE red
 --para cada slave
 $ su - hduser
 $ sudo sh conf-red-slave.sh
 --probar conexiones ssh para cada nodo
 --$ ssh hduser@slaveX  (X={1,2,3})
 --REINICIAR
-=========================CONFIGURACION HADOOP=========================
-=========MASTER hadoop=========
+##CONFIGURACION HADOOP
+###MASTER hadoop
 $ su - hduser
 $ sudo conf-hadoop-master.sh
-=========SLAVE hadoop=========
+###SLAVE hadoop
 $ su - hduser
 $ sudo conf-hadoop-slave.sh
-=============================MASTER ejecucion========================
+##MASTER ejecucion
 $ hdfs namenode -format
 $ start-dfs.sh
 $ jps
 $ start-yarn.sh
 --ver: 	192.168.8.80:50070
 $ stop-dfs.sh && stop yarn.sh
-=====================================================================
