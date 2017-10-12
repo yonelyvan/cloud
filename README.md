@@ -27,13 +27,12 @@ $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```
 ### CONFIGURACION RED
-##### Red master
+##### configuración de red en `maste`  
 ```shell
 $ su - hduser
 $ sudo sh conf-red-master.sh
 ```
-##### Red slave 
-(para cada slave)
+##### configuración de red en `slave` 
 ```shell
 su - hduser
 sudo sh conf-red-slave.sh
@@ -42,17 +41,17 @@ sudo sh conf-red-slave.sh
 > $ ssh hduser@slaveX  (X={1,2,3}) <br>
 > **REINICIAR master y slaves** <br>
 ### CONFIGURACION HADOOP
-##### hadoop master
+##### configuración de hadoop en `master`
 ```shell
 su - hduser
 sudo conf-hadoop-master.sh
 ```
-#### hadoop slave
+##### configuración de hadoop en `slaves`
 ```shell
 su - hduser
 sudo conf-hadoop-slave.sh
 ```
-### ejecucion master
+### Ejecución en `master`
 ```shell
 $ hdfs namenode -format
 $ start-dfs.sh
