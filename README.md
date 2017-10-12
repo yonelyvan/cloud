@@ -21,13 +21,17 @@ $ sudo sh conf-general.sh
 -se obtiene:
 -usuario: 		hduser
 -contraseña:	tux
+```shell
 $ su - hduser
 $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+```
 ### CONFIGURACION RED
 ##### Red master
+```shell
 $ su - hduser
 $ sudo sh conf-red-master.sh
+```
 -reiniciar
 ##### Red slave
 -para cada slave
