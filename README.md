@@ -1,4 +1,4 @@
-# PREREQUISITOS
+## PREREQUISITOS
 ##### Primero se debe instalar JAVA , SSH	y copiar hadoop en  /opt/hadoop-2.7.3/
 ```shell
 sudo apt-get update
@@ -6,51 +6,50 @@ sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get install openjdk-8-jdk
 sudo apt-get install ssh
 ```
-## Nota:
-##### los archivos:
+### archivos de configuración:
 conf-general.sh --(master y slaves) <Enter>
--- Copiar al directorio home del usuario con q se inicio secion
+Copiar al directorio home del usuario con q se inicio secion
 
 conf-red-master.sh y conf-hadoop-master.sh --(master)
--- Copiar al directorio home de hduser
+- Copiar al directorio home de hduser
 
 conf-red-slave.sh  y conf-hadoop-slave.sh --(slaves)
--- Copiar al directorio home de hduser segun corresponda el nodo(slave1,slave2,slave3)
-# MASTER Y SLAVES
---para cada nodo sin importar si es master o slave
+- Copiar al directorio home de hduser segun corresponda el nodo(slave1,slave2,slave3)
+## MASTER Y SLAVES
+-para cada nodo sin importar si es master o slave
 $ sudo sh conf-general.sh
---se obtiene:
---usuario: 		hduser
---contraseña:	tux
+-se obtiene:
+-usuario: 		hduser
+-contraseña:	tux
 $ su - hduser
 $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
-## CONFIGURACION RED
-### MASTER red
+### CONFIGURACION RED
+##### Red master
 $ su - hduser
 $ sudo sh conf-red-master.sh
---reiniciar
-### SLAVE red
---para cada slave
+-reiniciar
+##### Red slave
+-para cada slave
 ```shell
 su - hduser
 sudo sh conf-red-slave.sh
 ```
---probar conexiones ssh para cada nodo
---$ ssh hduser@slaveX  (X={1,2,3})
---REINICIAR
-## CONFIGURACION HADOOP
-### MASTER hadoop
+-probar conexiones ssh para cada nodo
+-$ ssh hduser@slaveX  (X={1,2,3})
+-REINICIAR
+### CONFIGURACION HADOOP
+##### hadoop master
 ```shell
 su - hduser
 sudo conf-hadoop-master.sh
 ```
-### SLAVE hadoop
+#### hadoop slave
 ```shell
 su - hduser
 sudo conf-hadoop-slave.sh
 ```
-## MASTER ejecucion
+### ejecucion master
 ```shell
 $ hdfs namenode -format
 $ start-dfs.sh
