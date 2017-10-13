@@ -1,4 +1,4 @@
-## PREREQUISITOS
+### Prerequisitos
 ##### Primero se debe instalar JAVA , SSH	y copiar hadoop en  /opt/hadoop-2.7.3/
 ```shell
 sudo apt-get update
@@ -15,8 +15,7 @@ Copiar al directorio home de hduser
 
 - **conf-red-slave.sh**  y **conf-hadoop-slave.sh** (slaves) :
 Copiar al directorio home de hduser segun corresponda el nodo(slave1,slave2,slave3)
-## MASTER Y SLAVES 
-- para cada nodo sin importar si es master o slave
+#### Para cada nodo sin importar si es master o slave
 ```shell
 sudo sh conf-general.sh
 ```
@@ -26,7 +25,8 @@ $ su - hduser
 $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```
-### CONFIGURACION RED
+## Configuración
+### Configuración de red
 ##### configuración de red en `maste`  
 ```shell
 $ su - hduser
