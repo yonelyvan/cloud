@@ -26,7 +26,6 @@ $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```
 ## Configuración
-### Configuración de red
 ##### configuración de red en `maste`  
 ```shell
 $ su - hduser
@@ -40,7 +39,7 @@ sudo sh conf-red-slave.sh
 > probar conexiones ssh para cada nodo <br>
 > $ ssh hduser@slaveX  (X={1,2,3}) <br>
 > **REINICIAR master y slaves** <br>
-### CONFIGURACION HADOOP
+
 ##### configuración de hadoop en `master`
 ```shell
 su - hduser
