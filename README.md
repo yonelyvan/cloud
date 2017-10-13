@@ -28,8 +28,8 @@ $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ## Configuración
 ##### configuración de red en `maste`  
 ```shell
-$ su - hduser
-$ sudo sh conf-red-master.sh
+su - hduser
+sudo sh conf-red-master.sh
 ```
 ##### configuración de red en `slave` 
 ```shell
