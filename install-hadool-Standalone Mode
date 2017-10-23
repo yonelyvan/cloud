@@ -1,0 +1,12 @@
+
+wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz
+tar -xzvf hadoop-2.8.1.tar.gz
+mv hadoop-2.8.1 /usr/local/hadoop
+
+sudo nano /etc/profile.d/hadoop.sh
+
+export HADOOP_HOME=/usr/local/hadoop/
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+source /etc/profile
+hadoop version
