@@ -1,6 +1,6 @@
 #$ su - hduser
 echo "=========Configurando Hadoop=========";
-if grep -q 'teamtux' '~/.bashrc';
+if grep -q 'teamtux' '.bashrc';
 	sudo source ~/.bashrc;
  	then echo "OK >>>";
 else
