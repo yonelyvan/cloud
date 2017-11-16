@@ -52,6 +52,7 @@ sudo conf-hadoop-slave.sh
 ```
 ### Ejecución en `master`
 ```shell
+$ source ~/.bashrc
 $ hdfs namenode -format
 $ start-dfs.sh
 $ jps
@@ -59,3 +60,8 @@ $ start-yarn.sh
 --ver: 	192.168.8.80:50070
 $ stop-dfs.sh && stop yarn.sh
 ```
+### verificar en el navegador
+```shell
+  localhost:50070/ 
+```
+
